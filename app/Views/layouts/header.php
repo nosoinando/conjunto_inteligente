@@ -1,0 +1,18 @@
+<!doctype html>
+<header class="border-bottom bg-white sticky-top">
+    <div class="container d-flex align-items-center justify-content-between py-2 gap-2">
+        <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html" aria-label="Ir al inicio">
+        <img src="./assets/img/depositphotos_78278034-stock-illustration-abstract-building-logo-design-template.jpg" alt="Logo plataforma" class="rounded-circle border" id="logoPlat">
+        Tu Conjunto Inteligente
+        </a>
+        <nav aria-label="Principal" class="flex-grow-1">
+        <ul class="nav justify-content-end">
+            <li class="nav-item"><a class="nav-link" href="<?= site_url('serviciosView') ?>">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?= site_url('tarifasView') ?>">Tarifas</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?= site_url('demoView') ?>">Demo</a></li>
+            <li class="nav-item"><a class="nav-link btn btn-primary text-white px-3 ms-2" href="<?= site_url('contactoView') ?>">Contacto</a></li>
+        </ul>
+        </nav>
+        <button id="themeToggle" class="btn btn-outline-secondary btn-sm" type="button" aria-pressed="false" aria-label="Alternar modo oscuro">🌙</button>
+    </div>
+</header>
