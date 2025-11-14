@@ -49,20 +49,13 @@ INSERT INTO `usuarios` (`nombre`, `apellido`, `email`, `password`, `telefono`, `
 -- ============================================
 CREATE TABLE IF NOT EXISTS `contactos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `usuario_id` int(11) NOT NULL,
   `nombre_completo` varchar(200) NOT NULL,
   `email` varchar(150) DEFAULT NULL,
-  `telefono` varchar(20) DEFAULT NULL,
-  `direccion` text DEFAULT NULL,
   `unidad` varchar(50) DEFAULT NULL,
-  `tipo_contacto` enum('residente','proveedor','emergencia','otro') DEFAULT 'residente',
   `notas` text DEFAULT NULL,
   `fecha_creacion` datetime DEFAULT CURRENT_TIMESTAMP,
   `fecha_actualizacion` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  KEY `idx_usuario_id` (`usuario_id`),
-  KEY `idx_tipo_contacto` (`tipo_contacto`),
-  CONSTRAINT `fk_contacto_usuario` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Insertar contactos de ejemplo

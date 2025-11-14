@@ -17,10 +17,10 @@
         <p class="text-secondary">Completa el formulario y te contactaremos.</p>
       </header>
 
-      <form class="row g-3 needs-validation" action="#" method="post" novalidate>
+      <form class="row g-3 needs-validation" action="<?= site_url('contacto') ?>" method="post" novalidate>
         <div class="col-md-6">
-          <label for="nombre" class="form-label">Nombre completo</label>
-          <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre"
+          <label for="nombre_completo" class="form-label">Nombre completo</label>
+          <input type="text" class="form-control" id="nombre_completo" name="nombre_completo" placeholder="Tu nombre"
                  autocomplete="name" required autofocus />
           <div class="invalid-feedback">Por favor ingresa tu nombre.</div>
         </div>
@@ -39,15 +39,9 @@
           <div class="invalid-feedback">Indica tu unidad o apartamento.</div>
         </div>
 
-        <div class="col-md-6">
-          <label for="fecha" class="form-label">Fecha preferida para demo</label>
-          <input type="date" class="form-control" id="fecha" name="fecha" required />
-          <div class="invalid-feedback">Selecciona una fecha.</div>
-        </div>
-
         <div class="col-12">
-          <label for="mensaje" class="form-label">Mensaje</label>
-          <textarea class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos tus necesidades"
+          <label for="notas" class="form-label">Mensaje</label>
+          <textarea class="form-control" id="notas" name="notas" rows="4" placeholder="Cuéntanos tus necesidades"
                     required></textarea>
           <div class="invalid-feedback">Escríbenos un breve mensaje.</div>
         </div>
