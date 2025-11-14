@@ -2,7 +2,7 @@
 <header class="border-bottom bg-white sticky-top">
     <div class="container d-flex align-items-center justify-content-between py-2 gap-2">
         <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="<?= site_url('homeView') ?>" aria-label="Ir al inicio">
-        <img src="../../../public/depositphotos_78278034-stock-illustration-abstract-building-logo-design-template.jpg" alt="Logo plataforma" class="rounded-circle border" id="logoPlat">
+        <img src="<?= base_url('assets/img/depositphotos_78278034-stock-illustration-abstract-building-logo-design-template.jpg') ?>" alt="Logo plataforma" class="rounded-circle border" id="logoPlat">
         Tu Conjunto Inteligente
         </a>
         <nav aria-label="Principal" class="flex-grow-1">
@@ -16,3 +16,4 @@
         <button id="themeToggle" class="btn btn-outline-secondary btn-sm" type="button" aria-pressed="false" aria-label="Alternar modo oscuro">🌙</button>
     </div>
 </header>
+<link rel="stylesheet" href="<?= base_url('assets/css/styles.css') ?>">
