@@ -1,8 +1,8 @@
 <!doctype html>
 <header class="border-bottom bg-white sticky-top">
     <div class="container d-flex align-items-center justify-content-between py-2 gap-2">
-        <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html" aria-label="Ir al inicio">
-        <img src="./assets/img/depositphotos_78278034-stock-illustration-abstract-building-logo-design-template.jpg" alt="Logo plataforma" class="rounded-circle border" id="logoPlat">
+        <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="<?= site_url('homeView') ?>" aria-label="Ir al inicio">
+        <img src="../../../public/depositphotos_78278034-stock-illustration-abstract-building-logo-design-template.jpg" alt="Logo plataforma" class="rounded-circle border" id="logoPlat">
         Tu Conjunto Inteligente
         </a>
         <nav aria-label="Principal" class="flex-grow-1">

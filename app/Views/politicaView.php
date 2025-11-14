@@ -11,24 +11,6 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="border-bottom bg-white sticky-top">
-    <div class="container d-flex align-items-center justify-content-between py-2 gap-2">
-      <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html" aria-label="Ir al inicio">
-        <img src="./assets/img/depositphotos_78278034-stock-illustration-abstract-building-logo-design-template.jpg" alt="Logo plataforma" class="rounded-circle border" id="logoPlat">
-        Tu Conjunto Inteligente
-      </a>
-      <nav aria-label="Principal" class="flex-grow-1">
-        <ul class="nav justify-content-end">
-          <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
-          <li class="nav-item"><a class="nav-link" href="tarifas.html">Tarifas</a></li>
-          <li class="nav-item"><a class="nav-link" href="demo.html">Demo</a></li>
-          <li class="nav-item"><a class="nav-link btn btn-primary text-white px-3 ms-2" href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
-      <button id="themeToggle" class="btn btn-outline-secondary btn-sm" type="button" aria-pressed="false" aria-label="Alternar modo oscuro">🌙</button>
-    </div>
-  </header>
-
   <main class="py-5 bg-light">
     <div class="container">
       <article>
@@ -43,17 +25,5 @@
       </article>
     </div>
   </main>
-
-  <footer class="py-4 border-top mt-5">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
-      <p class="mb-2 mb-md-0 small">© 2025 Tu Conjunto Inteligente — Proyecto educativo</p>
-      <nav aria-label="Secundario">
-        <a class="me-3" href="servicios.html">Servicios</a>
-        <a class="me-3" href="tarifas.html">Tarifas</a>
-        <a class="me-3" href="demo.html">Demo</a>
-        <a href="contacto.html">Contacto</a>
-      </nav>
-    </div>
-  </footer>
 </body>
 </html>
