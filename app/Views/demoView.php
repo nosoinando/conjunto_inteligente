@@ -21,7 +21,7 @@
         <div class="col-lg-6">
           <h3 class="h5">Audio de bienvenida</h3>
           <audio controls preload="none">
-            <source src="./assets/sounds/Text to Speech.wav" type="audio/mpeg" />
+            <source src="<?= base_url('assets/sounds/Text to Speech.wav')?>" type="audio/mpeg" />
             Tu navegador no soporta audio HTML5.
           </audio>
           <p class="small text-muted mt-2">Archivo de ejemplo: reemplázalo por tu audio real.</p>
@@ -29,7 +29,7 @@
         <div class="col-lg-6">
           <h3 class="h5">Video de recorrido</h3>
           <video controls width="100%" poster="https://picsum.photos/seed/poster/800/450">
-            <source src="./assets/video/invideo-ai-1080 Tu conjunto, 100% digital en 60s 2025-10-11.mp4" />
+            <source src="<?= base_url('assets/video/invideo-ai-1080 Tu conjunto, 100% digital en 60s 2025-10-11.mp4') ?>" />
             Tu navegador no soporta video HTML5.
           </video>
         </div>

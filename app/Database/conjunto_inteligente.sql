@@ -144,6 +144,19 @@ CREATE TABLE IF NOT EXISTS `comunicados` (
   CONSTRAINT `fk_comunicado_autor` FOREIGN KEY (`autor_id`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+
+-- ============================================
+-- TABLA: visitas
+-- Descripción: Visitas globales
+-- ============================================
+CREATE TABLE IF NOT EXISTS `visitas` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `path` varchar(255) NOT NULL UNIQUE,
+  `count` int(11) NOT NULL DEFAULT 0,
+  `last_visit` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 -- Insertar comunicados de ejemplo
 INSERT INTO `comunicados` (`titulo`, `contenido`, `tipo`, `autor_id`) VALUES
 ('Mantenimiento de piscina', 'Se informa que la piscina estará cerrada del 15 al 17 de noviembre por mantenimiento preventivo.', 'mantenimiento', 1),

@@ -5,11 +5,10 @@ namespace App\Controllers;
 
 use App\Models\UsuarioModel;
 use CodeIgniter\RESTful\ResourceController;
-use CodeIgniter\HTTP\RequestInterface;
-use CodeIgniter\API\ResponseTrait;
 /**
  * @property \CodeIgniter\HTTP\IncomingRequest $request
  */
+
 class UsuariosController extends ResourceController
 {
     protected $modelName = UsuarioModel::class;
@@ -33,8 +32,15 @@ class UsuariosController extends ResourceController
 
     public function create()
     {
-        // Intentar leer JSON
-        $data = $this->request->getJSON(true);
+        $data = null;
+        $contentType = $this->request->getHeaderLine('Content-Type');
+        if ($contentType && stripos($contentType, 'application/json') !== false) {
+            try {
+                $data = $this->request->getJSON(true);
+            } catch (\Throwable $e) {
+                $data = null;
+            }
+        }
 
         // Si es null, viene por POST normal
         if (!$data) {
@@ -46,16 +52,30 @@ class UsuariosController extends ResourceController
             return $this->fail('Formato de datos inválido. Envía JSON o POST.');
         }
 
+        if(!$this->model->find($data['email'] ?? null)) {
+            return $this->failResourceGone('Usuario ya existe');
+        }
+
         // Encriptar contraseña
         if (isset($data['password'])) {
             $data['password'] = password_hash($data['password'], PASSWORD_BCRYPT);
         }
 
+        // No guardar password_confirm
+        unset($data['password_confirm']);
+
+        $data['tipo_usuario'] = $data['tipo_usuario'] ?? 'residente'; // Valor por defecto
+
         if (!$this->model->insert($data)) {
-            return $this->failValidationErrors($this->model->errors());
+            // Si el modelo tiene errores, devolverlos
+            return $this->respond([
+                'success' => false,
+                'errors'  => $this->model->errors() ?: ['db' => 'No se pudo crear el usuario']
+            ], 500);
         }
 
         return $this->respondCreated([
+            'success' => true,
             'message' => 'Usuario creado correctamente'
         ]);
     }
