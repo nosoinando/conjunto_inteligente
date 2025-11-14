@@ -49,7 +49,7 @@
                 <li>Notificaciones por vencimiento</li>
                 <li>Trazabilidad completa</li>
               </ul>
-              <a href="contacto.html" class="stretched-link">Solicitar demo</a>
+              <a href="<?= site_url('contactoView') ?>" class="stretched-link">Solicitar demo</a>
             </div>
           </div>
         </article>
@@ -63,7 +63,7 @@
                 <li>Recordatorios automáticos</li>
                 <li>Calendario responsivo</li>
               </ul>
-              <a href="demo.html" class="stretched-link">Ver demo</a>
+              <a href="<?= site_url('demoView') ?>" class="stretched-link">Ver demo</a>
             </div>
           </div>
         </article>
@@ -77,7 +77,7 @@
                 <li>Tablero de anuncios</li>
                 <li>Boletines por email</li>
               </ul>
-              <a href="contacto.html" class="stretched-link">Contáctanos</a>
+              <a href="<?= site_url('contactoView') ?>" class="stretched-link">Contáctanos</a>
             </div>
           </div>
         </article>

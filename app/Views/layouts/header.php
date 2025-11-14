@@ -1,4 +1,5 @@
 <!doctype html>
+<link rel="stylesheet" href="<?= base_url('assets/css/styles.css') ?>">
 <header class="border-bottom bg-white sticky-top">
     <div class="container d-flex align-items-center justify-content-between py-2 gap-2">
         <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="<?= site_url('homeView') ?>" aria-label="Ir al inicio">
@@ -16,4 +17,3 @@
         <button id="themeToggle" class="btn btn-outline-secondary btn-sm" type="button" aria-pressed="false" aria-label="Alternar modo oscuro">🌙</button>
     </div>
 </header>
-<link rel="stylesheet" href="<?= base_url('assets/css/styles.css') ?>">
