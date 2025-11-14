@@ -8,7 +8,6 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <main class="py-5 bg-light">
@@ -50,7 +49,7 @@
                 <li>Notificaciones por vencimiento</li>
                 <li>Trazabilidad completa</li>
               </ul>
-              <a href="contacto.html" class="stretched-link">Solicitar demo</a>
+              <a href="<?= site_url('contactoView') ?>" class="stretched-link">Solicitar demo</a>
             </div>
           </div>
         </article>
@@ -64,7 +63,7 @@
                 <li>Recordatorios automáticos</li>
                 <li>Calendario responsivo</li>
               </ul>
-              <a href="demo.html" class="stretched-link">Ver demo</a>
+              <a href="<?= site_url('demoView') ?>" class="stretched-link">Ver demo</a>
             </div>
           </div>
         </article>
@@ -78,7 +77,7 @@
                 <li>Tablero de anuncios</li>
                 <li>Boletines por email</li>
               </ul>
-              <a href="contacto.html" class="stretched-link">Contáctanos</a>
+              <a href="<?= site_url('contactoView') ?>" class="stretched-link">Contáctanos</a>
             </div>
           </div>
         </article>

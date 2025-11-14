@@ -6,7 +6,7 @@
         <a class="me-3" href="<?= site_url('serviciosView') ?>">Servicios</a>
         <a class="me-3" href="<?= site_url('tarifasView') ?>">Tarifas</a>
         <a class="me-3" href="<?= site_url('demoView') ?>">Demo</a>
-        <a href="contacto.html">Contacto</a>
+        <a href="<?= site_url('contactoView') ?>">Contacto</a>
         </nav>
     </div>
 </footer>

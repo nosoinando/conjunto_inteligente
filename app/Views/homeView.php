@@ -8,7 +8,6 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <main>
@@ -18,12 +17,12 @@
           <div class="col-lg-7">
             <h1 class="display-5 fw-bold">Administra tu conjunto con transparencia y eficiencia</h1>
             <p class="lead mb-4">Pagos, reservas, PQRS y comunicaciones en un solo lugar.</p>
-            <a href="contacto.html" class="btn btn-light btn-lg me-2">Solicitar información</a>
-            <a href="servicios.html" class="btn btn-outline-light btn-lg">Ver funcionalidades</a>
+            <a href="<?= site_url('contactoView') ?>" class="btn btn-light btn-lg me-2">Solicitar información</a>
+            <a href="<?= site_url('serviciosView') ?>" class="btn btn-outline-light btn-lg">Ver funcionalidades</a>
           </div>
           <div class="col-lg-5">
             <figure class="float-card">
-              <img src="./assets/img/istock-1069330600.jpg" class="img-fluid rounded-3 shadow-sm bordered-img" alt="Vista aérea de conjunto residencial">
+              <img src="<?= base_url('assets/img/istock-1069330600.jpg') ?>" class="img-fluid rounded-3 shadow-sm bordered-img" alt="Vista aérea de conjunto residencial">
               <figcaption class="small text-white-50 mt-2"></figcaption>
             </figure>
           </div>
